@@ -1,0 +1,58 @@
+# Build Folders
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+TestResults/
+*.VisualState.xml
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.dbmdl
+
+# Visual Studio files
+.vs/
+*.vcxproj.user
+*.sdf
+*.opensdf
+*.cachefile
+
+# Auto-generated files
+Generated\ Files/
+*.g.cs
+*.g.i.cs
+*_i.c
+*_p.c
+*.ilk
+*.meta
+*.obj
+*.pdb
+*.idb
+*.tlog
+*.lastcodeanalysissucceeded
+
+# Backup and temporary files
+*.bak
+*.tmp
+*.temp
+*.log
+*.ncb
+*.aps
+
+# NuGet Packages
+*.nupkg
+packages/
+*.snupkg
+
+# Publish output
+publish/
+*.Publish.xml
+
+# User-specific files
+*.vspscc
+*.vssscc
+*.scc
+
+# IDE directories
+.idea/
+.vscode/

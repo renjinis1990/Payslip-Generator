@@ -1,0 +1,112 @@
+<Page x:Class="MyApp.Pages.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Login">
+
+    <Page.Resources>
+        <!-- Theme Colors -->
+        <SolidColorBrush x:Key="PrimaryBlue" Color="#A7C7E7"/>
+        <SolidColorBrush x:Key="PrimaryDark" Color="#2E3A59"/>
+        <SolidColorBrush x:Key="CardBg" Color="#FFFFFF"/>
+
+        <!-- Rounded TextBox Style -->
+        <Style TargetType="TextBox">
+            <Setter Property="Height" Value="36"/>
+            <Setter Property="Margin" Value="0,5,0,0"/>
+            <Setter Property="Padding" Value="10,6"/>
+            <Setter Property="Background" Value="#F4F8FE"/>
+            <Setter Property="BorderBrush" Value="#C6D9EF"/>
+            <Setter Property="BorderThickness" Value="1.2"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+
+        <!-- Rounded PasswordBox Style -->
+        <Style TargetType="PasswordBox">
+            <Setter Property="Height" Value="36"/>
+            <Setter Property="Margin" Value="0,5,0,0"/>
+            <Setter Property="Padding" Value="10,6"/>
+            <Setter Property="Background" Value="#F4F8FE"/>
+            <Setter Property="BorderBrush" Value="#C6D9EF"/>
+            <Setter Property="BorderThickness" Value="1.2"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+
+        <!-- Rounded Login Button -->
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="38"/>
+            <Setter Property="Background" Value="#2E3A59"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Margin" Value="0,18,0,0"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+
+    </Page.Resources>
+
+    <Grid Background="#F2F6FC">
+
+        <!-- Center Card -->
+        <Border Width="350"
+                Padding="30"
+                Background="{StaticResource CardBg}"
+                CornerRadius="14"
+                BorderBrush="#D6E6F2"
+                BorderThickness="1.5"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="14"
+                                  ShadowDepth="3"
+                                  Opacity="0.22"/>
+            </Border.Effect>
+
+            <StackPanel>
+
+                <!-- Title -->
+                <TextBlock Text="Welcome Human Arm"
+                           FontSize="22"
+                           FontWeight="SemiBold"
+                           Foreground="{StaticResource PrimaryDark}"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,10"/>
+
+                <TextBlock Text="Login "
+                           FontSize="14"
+                           Foreground="#6B7A99"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,20"/>
+
+                <!-- Username -->
+                <TextBlock Text="Username"
+                           Margin="0,5,0,0"
+                           Foreground="{StaticResource PrimaryDark}"/>
+                <TextBox x:Name="UsernameBox"
+                   />
+
+                <!-- Password -->
+                <TextBlock Text="Password"
+                           Margin="0,10,0,0"
+                           Foreground="{StaticResource PrimaryDark}"/>
+                <PasswordBox x:Name="PasswordBox"
+                    />
+
+                <!-- Login Button -->
+                <Button Content="Login"
+                        Click="Login_Click"
+                        Background="{StaticResource PrimaryBlue}"
+                        Foreground="#2E3A59"/>
+
+                <!-- Error Label -->
+                <TextBlock x:Name="ErrorText"
+                           Foreground="Red"
+                           TextAlignment="Center"
+                           Margin="0,12,0,0"/>
+            </StackPanel>
+
+        </Border>
+
+    </Grid>
+</Page>

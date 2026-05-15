@@ -1,0 +1,195 @@
+<Page x:Class="MyDesktopApp.Pages.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Page1">
+
+    <Page.Resources>
+        <SolidColorBrush x:Key="PrimaryBlue" Color="#A7C7E7"/>
+        <SolidColorBrush x:Key="PrimaryDark" Color="#2E3A59"/>
+        <SolidColorBrush x:Key="CardBackground" Color="#FFFFFF"/>
+    </Page.Resources>
+
+    <Grid Background="#F2F6FC">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- TOP BAR -->
+        <Grid Background="{StaticResource PrimaryBlue}" Height="55">
+            <Button x:Name="GoToPage3Button"
+                    Content="View PDF Records"
+                    Width="160"
+                    Height="32"
+                    HorizontalAlignment="Right"
+                    Margin="10,10,20,10"
+                    VerticalAlignment="Center"
+                    Background="#2E3A59"
+                    Foreground="White"
+                    FontWeight="SemiBold"
+                    BorderThickness="0"
+                    Padding="6"
+                    Cursor="Hand"
+                    Click="GoToPage3_Click"/>
+        </Grid>
+
+        <!-- MAIN CONTENT (NO SCROLLVIEW) -->
+        <StackPanel Grid.Row="1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    Width="520"
+                    Margin="0,30,0,30">
+
+            <!-- MONTH + YEAR CARD -->
+            <Border BorderBrush="#D6E6F2"
+                    BorderThickness="1.5"
+                    CornerRadius="12"
+                    Padding="25"
+                    Margin="0,0,0,25"
+                    Background="{StaticResource CardBackground}">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="12"
+                                      ShadowDepth="3"
+                                      Opacity="0.18"/>
+                </Border.Effect>
+
+                <StackPanel>
+                    <TextBlock Text="Select Month and Year"
+                               FontSize="18"
+                               FontWeight="SemiBold"
+                               Foreground="{StaticResource PrimaryDark}"
+                               HorizontalAlignment="Center"
+                               Margin="0,0,0,20"/>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                        <!-- Month -->
+                        <ComboBox x:Name="MonthComboBox"
+                                  Width="170"
+                                  Height="36"
+                                  Margin="10,0"
+                                  SelectedIndex="0"
+                                  Background="#F4F8FE"
+                                  BorderBrush="#C6D9EF">
+                            <ComboBoxItem Content="Select month" IsEnabled="False" />
+                            <ComboBoxItem Content="January"/>
+                            <ComboBoxItem Content="February"/>
+                            <ComboBoxItem Content="March"/>
+                            <ComboBoxItem Content="April"/>
+                            <ComboBoxItem Content="May"/>
+                            <ComboBoxItem Content="June"/>
+                            <ComboBoxItem Content="July"/>
+                            <ComboBoxItem Content="August"/>
+                            <ComboBoxItem Content="September"/>
+                            <ComboBoxItem Content="October"/>
+                            <ComboBoxItem Content="November"/>
+                            <ComboBoxItem Content="December"/>
+                        </ComboBox>
+
+                        <!-- Year -->
+                        <ComboBox x:Name="YearComboBox"
+                                  Width="170"
+                                  Height="36"
+                                  Margin="10,0"
+                                  SelectedIndex="0"
+                                  Background="#F4F8FE"
+                                  BorderBrush="#C6D9EF">
+                            <ComboBoxItem Content="Select year" IsEnabled="False" />
+                            <ComboBoxItem Content="2024"/>
+                            <ComboBoxItem Content="2025"/>
+                            <ComboBoxItem Content="2026"/>
+                            <ComboBoxItem Content="2027"/>
+                            <ComboBoxItem Content="2028"/>
+                            <ComboBoxItem Content="2029"/>
+                            <ComboBoxItem Content="2030"/>
+                            <ComboBoxItem Content="2031"/>
+                            <ComboBoxItem Content="2032"/>
+                            <ComboBoxItem Content="2033"/>
+                            <ComboBoxItem Content="2034"/>
+                            <ComboBoxItem Content="2035"/>
+                        </ComboBox>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <!-- CATEGORY + EXCEL UPLOAD CARD -->
+            <Border BorderBrush="#D6E6F2"
+                    BorderThickness="1.5"
+                    CornerRadius="12"
+                    Padding="25"
+                    Background="{StaticResource CardBackground}">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="12"
+                                      ShadowDepth="3"
+                                      Opacity="0.18"/>
+                </Border.Effect>
+
+                <StackPanel>
+                    <TextBlock Name="ExcelDetailsText"
+                               Text="Please upload your Excel file and select a value from the dropdown to continue."
+                               FontSize="16"
+                               TextWrapping="Wrap"
+                               Foreground="{StaticResource PrimaryDark}"
+                               TextAlignment="Center"
+                               Margin="0,0,0,20"/>
+
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center">
+
+                        <!-- Dropdown -->
+                    <ComboBox Width="200"
+          Height="36"
+          x:Name="OptionsComboBox"
+          Margin="10,0"
+          Background="#F4F8FE"
+          BorderBrush="#C6D9EF"
+          SelectionChanged="OptionsComboBox_SelectionChanged">
+
+    <ComboBoxItem Content=" Select Employee Category" IsEnabled="False"/>
+    <ComboBoxItem Content="Canteen Staffs"/>
+    <ComboBoxItem Content="Ward Assistants"/>
+    <ComboBoxItem Content="Social Investigators"/>
+    <ComboBoxItem Content="Administrative Assistant"/>
+    <ComboBoxItem Content="Electrician and Plumber"/>
+</ComboBox>
+
+                        <!-- Upload -->
+                        <Button Content="Upload Excel"
+                                Width="150"
+                                Height="36"
+                                x:Name="UploadButton"
+                                Background="{StaticResource PrimaryBlue}"
+                                Foreground="#2E3A59"
+                                FontWeight="SemiBold"
+                                BorderThickness="0"
+                                Cursor="Hand"
+                                Margin="10,0"
+                                Click="UploadFile_Click"/>
+                    </StackPanel>
+
+                </StackPanel>
+            
+            </Border>
+             <Button x:Name="GoToPage2Button"
+                Content="Continue"
+                Width="200"
+                Height="42"
+                Grid.Row="2"
+                HorizontalAlignment="Center"
+                Margin="20,20,20,25"
+                Background="{StaticResource PrimaryDark}"
+                Foreground="White"
+                FontSize="15"
+                BorderThickness="0"
+                Cursor="Hand"
+                IsEnabled="False"
+                Click="GoToPage2_Click"/>
+        </StackPanel>
+
+        <!-- CONTINUE BUTTON -->
+      
+             
+    </Grid>
+</Page>

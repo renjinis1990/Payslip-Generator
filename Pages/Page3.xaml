@@ -1,0 +1,76 @@
+<Page x:Class="MyDesktopApp.Pages.Page3"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Page3">
+
+    <Grid Background="White" Margin="20">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>   <!-- Header & Search -->
+            <RowDefinition Height="*"/>      <!-- Main Content -->
+            <RowDefinition Height="Auto"/>   <!-- Buttons -->
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>  <!-- Folder Tree -->
+            <ColumnDefinition Width="*"/>    <!-- PDF List -->
+        </Grid.ColumnDefinitions>
+
+        <!-- 🧭 Header + Search Bar -->
+        <StackPanel Orientation="Horizontal" 
+                    Grid.Row="0" Grid.ColumnSpan="2" 
+                    HorizontalAlignment="Center" Margin="0,0,0,20">
+
+            <TextBlock Text="Generated PDF Files" 
+                       FontSize="22" FontWeight="Bold" 
+                       Margin="0,0,20,0"/>
+
+            <TextBox x:Name="SearchTextBox"
+                     Width="250" Height="30"
+                     Margin="0,0,10,0"
+                     TextChanged="SearchTextBox_TextChanged"/>
+
+            <Button x:Name="ClearSearchButton"
+                    Content="Clear"
+                    Width="70" Height="30"
+                    Click="ClearSearchButton_Click"/>
+        </StackPanel>
+
+        <!-- 📁 Folder Tree (LEFT SIDE) -->
+        <Border Grid.Row="1" Grid.Column="0"
+                Background="White"
+                CornerRadius="6"
+                Padding="10"
+                BorderBrush="#CCC"
+                BorderThickness="1"
+                Margin="0,0,20,0">
+
+            <TreeView x:Name="FolderTree"
+                      SelectedItemChanged="FolderTree_SelectedItemChanged"/>
+        </Border>
+
+        <!-- 📄 PDF List (RIGHT SIDE) -->
+        <ScrollViewer Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="PdfListPanel"/>
+        </ScrollViewer>
+
+        <!-- ⚙️ Bottom Buttons -->
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="2"
+                    Orientation="Horizontal" 
+                    HorizontalAlignment="Center" 
+                    Margin="0,20,0,0">
+
+            <Button x:Name="RefreshButton"
+                    Content="🔄 Refresh List"
+                    Width="130" Height="35"
+                    Click="RefreshButton_Click"/>
+
+            <Button x:Name="BackToPage1Button"
+                    Content="⬅ Back to Page 1"
+                    Width="130" Height="35"
+                    Margin="10,0,0,0"
+                    Click="BackToPage1_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Page>

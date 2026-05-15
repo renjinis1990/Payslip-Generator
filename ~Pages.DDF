@@ -1,0 +1,38 @@
+;Auto-generated Diamond Directive File. Can be deleted without harm.
+.Set CabinetNameTemplate=D:\Pyslip generator\payslipGenerator 22-11-2025\payslipGenerator\~Pages.CAB
+.Set CompressionType=LZX
+.Set CompressionLevel=7
+.Set InfFileName=D:\Pyslip generator\payslipGenerator 22-11-2025\payslipGenerator\Pages\~paysliphumanarm_LAYOUT.INF
+.Set RptFileName=D:\Pyslip generator\payslipGenerator 22-11-2025\payslipGenerator\~Pages.RPT
+.Set MaxDiskSize=CDROM
+.Set ReservePerCabinetSize=0
+.Set InfCabinetLineFormat=*cab#*=Application Source Media,*cabfile*,0
+.Set Compress=on
+.Set CompressionMemory=21
+.Set DiskDirectoryTemplate=
+.Set Cabinet=ON
+.Set MaxCabinetSize=999999999
+.Set InfDiskHeader=
+.Set InfDiskLineFormat=
+.Set InfCabinetHeader=[SourceDisksNames]
+.Set InfFileHeader=
+.Set InfFileHeader1=[SourceDisksFiles]
+.Set InfFileLineFormat=*file*=*cab#*,,*size*,*csum*
+D:\Pyslip generator\payslipGenerator 22-11-2025\payslipGenerator\.gitignore
+D:\Pyslip generator\payslipGenerator 22-11-2025\payslipGenerator\App.xaml
+D:\Pyslip generator\payslipGenerator 22-11-2025\payslipGenerator\App.xaml.cs
+D:\Pyslip generator\payslipGenerator 22-11-2025\payslipGenerator\AssemblyInfo.cs
+D:\Pyslip generator\payslipGenerator 22-11-2025\payslipGenerator\DIVYA PP_Payslip.txt
+D:\Pyslip generator\payslipGenerator 22-11-2025\payslipGenerator\MainWindow.xaml
+D:\Pyslip generator\payslipGenerator 22-11-2025\payslipGenerator\MainWindow.xaml.cs
+D:\Pyslip generator\payslipGenerator 22-11-2025\payslipGenerator\MyDesktopApp.csproj
+D:\Pyslip generator\payslipGenerator 22-11-2025\payslipGenerator\MyDesktopApp.sln
+D:\Pyslip generator\payslipGenerator 22-11-2025\payslipGenerator\README.md
+D:\Pyslip generator\payslipGenerator 22-11-2025\payslipGenerator\Pages\LoginPage.xaml
+D:\Pyslip generator\payslipGenerator 22-11-2025\payslipGenerator\Pages\LoginPage.xaml.cs
+D:\Pyslip generator\payslipGenerator 22-11-2025\payslipGenerator\Pages\Page1.xaml
+D:\Pyslip generator\payslipGenerator 22-11-2025\payslipGenerator\Pages\Page1.xaml.cs
+D:\Pyslip generator\payslipGenerator 22-11-2025\payslipGenerator\Pages\Page2.xaml
+D:\Pyslip generator\payslipGenerator 22-11-2025\payslipGenerator\Pages\Page2.xaml.cs
+D:\Pyslip generator\payslipGenerator 22-11-2025\payslipGenerator\Pages\Page3.xaml
+D:\Pyslip generator\payslipGenerator 22-11-2025\payslipGenerator\Pages\Page3.xaml.cs
